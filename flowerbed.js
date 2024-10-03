@@ -1,4 +1,4 @@
-const flowerbed = [1, 0, 0, 0, 1];
+const flowerbed = [0, 1, 0];
 const n = 1;
 let count = 0;
 
@@ -13,7 +13,7 @@ for (let i = 0; i < flowerbed.length; i++) {
   if (
     flowerbed[i] == 0 &&
     (i == 0 || flowerbed[i - 1] == 0) &&
-    (flowerbed[flowerbed.length - 1] == 0 || flowerbed[i + 1] == 0)
+    ((i == flowerbed.length - 1) == 0 || flowerbed[i + 1] == 0)
   ) {
     flowerbed[i] = 1;
     count++;
@@ -23,3 +23,7 @@ for (let i = 0; i < flowerbed.length; i++) {
     }
   }
 }
+
+return count >= n;
+
+console.log("Output: ", count >= n);
