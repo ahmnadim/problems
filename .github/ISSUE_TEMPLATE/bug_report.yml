@@ -8,6 +8,14 @@ body:
       value: |
         Thanks for reporting a bug! Please provide as much detail as possible so we can investigate and fix it quickly.
 
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Where are you running the app?
+      placeholder: e.g., local dev, Vercel, Netlify, Docker
+    validations:
+      required: true
 
   - type: input
     id: next-version
