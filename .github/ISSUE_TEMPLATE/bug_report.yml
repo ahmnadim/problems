@@ -1,44 +1,64 @@
-name: Bug Report
-description: Report a bug to help us improve
-title: "[Bug] <brief description>"
-labels: ["bug", "triage"]
+name: 🐞 Bug Report
+description: Report an issue or unexpected behavior
+title: "[Bug]: "
 assignees: []
-
+labels: ["bug"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for reporting a bug! Please provide as much detail as possible.
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      description: How can we reproduce the bug?
-      placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error...
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected Behavior
-      description: What should happen?
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual Behavior
-      description: What actually happens?
-    validations:
-      required: true
-  - type: input
-    id: environment
-    attributes:
-      label: Environment
-      description: OS, browser, version, etc.
-      placeholder: e.g., Windows 10, Chrome 120
-    validations:
-      required: false
+
+- type: markdown
+  attributes:
+  value: |
+  Thank you for taking the time to report a bug! Please fill out the form below so we can help resolve the issue quickly.
+
+- type: input
+  id: environment
+  attributes:
+  label: Environment
+  description: What environment are you running the app in? (e.g., local, staging, production)
+  placeholder: "e.g., local development on macOS, Node 18, Next.js 14"
+  validations:
+  required: true
+
+
+- type: textarea
+  id: description
+  attributes:
+  label: Bug Description
+  description: Please describe the issue you are experiencing.
+  placeholder: "A clear and concise description of what the bug is."
+  validations:
+  required: true
+
+- type: textarea
+  id: steps
+  attributes:
+  label: Steps to Reproduce
+  description: How can we reproduce the bug?
+  placeholder: | 1. Go to '...' 2. Click on '...' 3. Scroll down to '...' 4. See error
+  validations:
+  required: true
+
+- type: textarea
+  id: expected
+  attributes:
+  label: Expected Behavior
+  description: What did you expect to happen?
+  placeholder: "Describe what you expected to see instead."
+  validations:
+  required: true
+
+- type: textarea
+  id: logs
+  attributes:
+  label: Screenshots or Console Logs
+  description: If applicable, add screenshots or console logs to help explain your problem.
+  placeholder: "Attach logs, errors, or screenshots here."
+
+- type: checkboxes
+  id: confirmations
+  attributes:
+  label: Confirmation
+  description: Please confirm the following
+  options: - label: I have searched existing issues and none match this bug.
+  required: true - label: I have provided all the required information above.
+  required: true
