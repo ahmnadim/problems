@@ -2,6 +2,8 @@ name: Bug Report
 description: Report a bug to help us improve
 title: "[Bug] <brief description>"
 labels: ["bug", "triage"]
+assignees: []
+
 body:
   - type: markdown
     attributes:
