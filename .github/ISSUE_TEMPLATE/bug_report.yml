@@ -1,76 +1,35 @@
-name: 🐞 Bug Report
-description: Report an issue or unexpected behavior
-title: "[Bug]: "
+name: Bug Report
+description: File a bug report
+title: "[Bug] "
 labels: ["bug"]
+assignees: []
 body:
   - type: markdown
     attributes:
-      value: |
-        Thank you for taking the time to report a bug! Please fill out the form below so we can help resolve the issue quickly.
-
-  - type: input
-    id: environment
-    attributes:
-      label: Environment
-      description: What environment are you running the app in? (e.g., local, staging, production)
-      placeholder: "e.g., local development on macOS, Node 18, Next.js 14"
-    validations:
-      required: true
-
-  - type: input
-    id: version
-    attributes:
-      label: App/Library Version
-      description: What version of the app or library are you using?
-      placeholder: "e.g., 1.0.3"
-    validations:
-      required: true
-
+      value: "## Bug Report"
   - type: textarea
     id: description
     attributes:
-      label: Bug Description
-      description: Please describe the issue you are experiencing.
-      placeholder: "A clear and concise description of what the bug is."
+      label: Description
+      description: Describe the bug in detail.
+      placeholder: What went wrong?
     validations:
       required: true
-
-  - type: textarea
-    id: steps
+  - type: input
+    id: version
     attributes:
-      label: Steps to Reproduce
-      description: How can we reproduce the bug?
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll down to '...'
-        4. See error
+      label: Version
+      description: What version of the software?
+      placeholder: e.g., 1.2.3
     validations:
       required: true
-
-  - type: textarea
-    id: expected
+  - type: dropdown
+    id: severity
     attributes:
-      label: Expected Behavior
-      description: What did you expect to happen?
-      placeholder: "Describe what you expected to see instead."
-    validations:
-      required: true
-
-  - type: textarea
-    id: logs
-    attributes:
-      label: Screenshots or Console Logs
-      description: If applicable, add screenshots or console logs to help explain your problem.
-      placeholder: "Attach logs, errors, or screenshots here."
-
-  - type: checkboxes
-    id: confirmations
-    attributes:
-      label: Confirmation
-      description: Please confirm the following
+      label: Severity
       options:
-        - label: I have searched existing issues and none match this bug.
-          required: true
-        - label: I have provided all the required information above.
-          required: true
+        - Low
+        - Medium
+        - High
+    validations:
+      required: false
