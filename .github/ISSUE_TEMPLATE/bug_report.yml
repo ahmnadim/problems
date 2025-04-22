@@ -1,9 +1,10 @@
 name: 🐞 Bug Report
 description: Report an issue or unexpected behavior
 title: "[Bug]: "
-assignees: []
 labels: ["bug"]
+assignees: []
 body:
+
 - type: markdown
   attributes:
   value: |
@@ -17,7 +18,6 @@ body:
   placeholder: "e.g., local development on macOS, Node 18, Next.js 14"
   validations:
   required: true
-
 
 - type: textarea
   id: description
